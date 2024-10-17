@@ -3,15 +3,13 @@ from database import cursor, sqlite_conn
 from deepface import DeepFace
 from PIL import Image
 import numpy as np
-from api.app import qdrant_client, models
+from vector_db import qdrant_client, models
 import pickle
 from fastapi.responses import JSONResponse
 import io
+
 # Create routers
 staff_router = APIRouter()
-
-
-
 
 # Helper function: process image and return embedding
 def generate_face_embedding(image_data):

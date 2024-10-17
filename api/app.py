@@ -1,12 +1,10 @@
 from deepface import DeepFace
 from fastapi import FastAPI, File, UploadFile, Form
 from fastapi.responses import JSONResponse
-from qdrant_client import QdrantClient, models
-from PIL import Image
-import numpy as np
 from database import cursor, fetch_staff_embeddings
-from staff_router import staff_router
-from zone_router import zone_router
+import pickle
+from vector_db import qdrant_client, models
+from api import staff_router, zone_router
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -14,25 +12,30 @@ app = FastAPI()
 app.include_router(staff_router)
 app.include_router(zone_router)
 
-# Create Qdrant Client (in-memory database for this example)
-qdrant_client = QdrantClient(":memory:")
 
-# Create collections for Staff and Zone tables in Qdrant
-qdrant_client.create_collection(
-    collection_name="staff_collection",
-    vectors_config=models.VectorParams(
-        size=128,  # Facenet typically outputs 128-dimensional vectors
-        distance=models.Distance.COSINE,
-    ),
-)
+# Function to load face vectors from SQLite and upsert them into Qdrant
+# def load_vectors_to_qdrant():
+#     cursor.execute("SELECT id, face_image FROM staff")
+#     rows = cursor.fetchall()
+#     for row in rows:
+#         staff_id = row[0]
+#         embedding_bytes = row[1]
+#         embedding = pickle.loads(embedding_bytes)  # Deserialize the embedding back into a list
 
-qdrant_client.create_collection(
-    collection_name="zone_collection",
-    vectors_config=models.VectorParams(
-        size=4,  # Zone has 4 coordinates: x1, y1, x2, y2
-        distance=models.Distance.EUCLID,  # Euclidean distance for zones
-    ),
-)
+#         # Insert vector into Qdrant
+#         qdrant_client.upsert(
+#             collection_name="staff_collection",
+#             points=[
+#                 models.PointStruct(
+#                     id=staff_id,
+#                     vector=embedding,  # The deserialized face vector
+#                     payload={
+#                         "staff_id": staff_id
+#                     }
+#                 )
+#             ]
+#         )
+
 
 @app.post("/tracking_changes/")
 async def track_changes():

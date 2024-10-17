@@ -1,4 +1,4 @@
-from api2 import fetch_staff_embeddings, load_staff
+from database import fetch_staff_embeddings, load_staff
 
 # staff_embeddings = fetch_staff_embeddings()
 # print(staff_embeddings)

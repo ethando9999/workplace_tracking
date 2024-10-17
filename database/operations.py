@@ -1,4 +1,4 @@
-from connect_db import cursor
+from .connect_db import cursor
 import pickle
 
 # Example for querying and deserializing embeddings

@@ -1,0 +1,1 @@
+from .connect_vectordb import qdrant_client, models
