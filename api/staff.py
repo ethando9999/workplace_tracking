@@ -90,7 +90,6 @@ async def query_image_face(image_face: UploadFile = File(...)):
                 "payload": point.payload,
                 "score": point.score  # Similarity score
             })
-
         return JSONResponse(content={"similar_faces": similar_faces}, status_code=200)
 
     except Exception as e:

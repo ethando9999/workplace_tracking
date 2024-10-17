@@ -1,0 +1,902 @@
+[
+    {
+        "label": "DeepFace",
+        "importPath": "deepface",
+        "description": "deepface",
+        "isExtraImport": true,
+        "detail": "deepface",
+        "documentation": {}
+    },
+    {
+        "label": "DeepFace",
+        "importPath": "deepface",
+        "description": "deepface",
+        "isExtraImport": true,
+        "detail": "deepface",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "StreamingResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_staff_embeddings",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite_conn",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite_conn",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_staff_embeddings",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "load_staff",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "qdrant_client",
+        "importPath": "vector_db",
+        "description": "vector_db",
+        "isExtraImport": true,
+        "detail": "vector_db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "vector_db",
+        "description": "vector_db",
+        "isExtraImport": true,
+        "detail": "vector_db",
+        "documentation": {}
+    },
+    {
+        "label": "qdrant_client",
+        "importPath": "vector_db",
+        "description": "vector_db",
+        "isExtraImport": true,
+        "detail": "vector_db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "vector_db",
+        "description": "vector_db",
+        "isExtraImport": true,
+        "detail": "vector_db",
+        "documentation": {}
+    },
+    {
+        "label": "staff_router",
+        "importPath": "api",
+        "description": "api",
+        "isExtraImport": true,
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "zone_router",
+        "importPath": "api",
+        "description": "api",
+        "isExtraImport": true,
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "api",
+        "description": "api",
+        "isExtraImport": true,
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "QdrantClient",
+        "importPath": "qdrant_client",
+        "description": "qdrant_client",
+        "isExtraImport": true,
+        "detail": "qdrant_client",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "qdrant_client",
+        "description": "qdrant_client",
+        "isExtraImport": true,
+        "detail": "qdrant_client",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "glob",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "glob",
+        "description": "glob",
+        "detail": "glob",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "sysconfig",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sysconfig",
+        "description": "sysconfig",
+        "detail": "sysconfig",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "winreg",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "winreg",
+        "description": "winreg",
+        "detail": "winreg",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "VideoFileClip",
+        "importPath": "moviepy.editor",
+        "description": "moviepy.editor",
+        "isExtraImport": true,
+        "detail": "moviepy.editor",
+        "documentation": {}
+    },
+    {
+        "label": "uvicorn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uvicorn",
+        "description": "uvicorn",
+        "detail": "uvicorn",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "api.app",
+        "description": "api.app",
+        "peekOfCode": "app = FastAPI()\n# Add routers to the main FastAPI app\napp.include_router(staff_router)\napp.include_router(zone_router)\n# Function to load face vectors from SQLite and upsert them into Qdrant\n# def load_vectors_to_qdrant():\n#     cursor.execute(\"SELECT id, face_image FROM staff\")\n#     rows = cursor.fetchall()\n#     for row in rows:\n#         staff_id = row[0]",
+        "detail": "api.app",
+        "documentation": {}
+    },
+    {
+        "label": "generate_face_embedding",
+        "kind": 2,
+        "importPath": "api.staff",
+        "description": "api.staff",
+        "peekOfCode": "def generate_face_embedding(image_data):\n    image = Image.open(io.BytesIO(image_data))\n    image_np = np.array(image)\n    embedding = DeepFace.represent(image_np, model_name=\"Facenet512\")[0][\"embedding\"]\n    return embedding\n# Define API route to add a staff member\n@staff_router.post(\"/add_staff/\")\nasync def add_staff(\n    name: str = Form(...),\n    age: int = Form(...),",
+        "detail": "api.staff",
+        "documentation": {}
+    },
+    {
+        "label": "staff_router",
+        "kind": 5,
+        "importPath": "api.staff",
+        "description": "api.staff",
+        "peekOfCode": "staff_router = APIRouter()\n# Helper function: process image and return embedding\ndef generate_face_embedding(image_data):\n    image = Image.open(io.BytesIO(image_data))\n    image_np = np.array(image)\n    embedding = DeepFace.represent(image_np, model_name=\"Facenet512\")[0][\"embedding\"]\n    return embedding\n# Define API route to add a staff member\n@staff_router.post(\"/add_staff/\")\nasync def add_staff(",
+        "detail": "api.staff",
+        "documentation": {}
+    },
+    {
+        "label": "zone_router",
+        "kind": 5,
+        "importPath": "api.zone",
+        "description": "api.zone",
+        "peekOfCode": "zone_router = APIRouter()\n# Define API route to add a zone\n@zone_router.post(\"/add_zone/\")\nasync def add_zone(\n    x1: float = Form(...),\n    y1: float = Form(...),\n    x2: float = Form(...),\n    y2: float = Form(...),\n    x3: float = Form(...),\n    y3: float = Form(...),",
+        "detail": "api.zone",
+        "documentation": {}
+    },
+    {
+        "label": "TEMP_DIR",
+        "kind": 5,
+        "importPath": "api.zone",
+        "description": "api.zone",
+        "peekOfCode": "TEMP_DIR = \"temp_video_files\"\nos.makedirs(TEMP_DIR, exist_ok=True)  # Create the directory if it doesn't exist\n@zone_router.post(\"/process_video/\")\nasync def process_video(video_file: UploadFile = File(...)):\n    try:\n        # Load the video file into a temporary directory\n        temp_video_path = os.path.join(TEMP_DIR, \"temp_video.mp4\")\n        with open(temp_video_path, \"wb\") as temp_video_file:\n            temp_video_file.write(await video_file.read())\n        # Open the video using OpenCV",
+        "detail": "api.zone",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite_conn",
+        "kind": 5,
+        "importPath": "database.connect_db",
+        "description": "database.connect_db",
+        "peekOfCode": "sqlite_conn = sqlite3.connect('database.db')\ncursor = sqlite_conn.cursor()\n# Create tables for staff and zone\ncursor.execute('''CREATE TABLE IF NOT EXISTS staff (\n    id TEXT PRIMARY KEY,  -- Change id type to TEXT for alphanumeric IDs\n    name TEXT,\n    age INTEGER,\n    position TEXT\n)''')\ncursor.execute('''CREATE TABLE IF NOT EXISTS zone (",
+        "detail": "database.connect_db",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "database.connect_db",
+        "description": "database.connect_db",
+        "peekOfCode": "cursor = sqlite_conn.cursor()\n# Create tables for staff and zone\ncursor.execute('''CREATE TABLE IF NOT EXISTS staff (\n    id TEXT PRIMARY KEY,  -- Change id type to TEXT for alphanumeric IDs\n    name TEXT,\n    age INTEGER,\n    position TEXT\n)''')\ncursor.execute('''CREATE TABLE IF NOT EXISTS zone (\n    id INTEGER PRIMARY KEY,",
+        "detail": "database.connect_db",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_staff_embeddings",
+        "kind": 2,
+        "importPath": "database.operations",
+        "description": "database.operations",
+        "peekOfCode": "def fetch_staff_embeddings():\n    cursor.execute(\"SELECT id, face_image FROM staff\")\n    rows = cursor.fetchall()\n    staff_embeddings = []\n    for row in rows:\n        staff_id = row[0]\n        embedding_bytes = row[1]\n        embedding = pickle.loads(embedding_bytes)  # Deserialize back to list\n        staff_embeddings.append((staff_id, embedding))\n    return staff_embeddings",
+        "detail": "database.operations",
+        "documentation": {}
+    },
+    {
+        "label": "load_staff",
+        "kind": 2,
+        "importPath": "database.operations",
+        "description": "database.operations",
+        "peekOfCode": "def load_staff():\n    cursor.execute(\"SELECT id, name, age, position FROM staff\")\n    rows = cursor.fetchall()\n    return rows",
+        "detail": "database.operations",
+        "documentation": {}
+    },
+    {
+        "label": "qdrant_client",
+        "kind": 5,
+        "importPath": "vector_db.connect_vectordb",
+        "description": "vector_db.connect_vectordb",
+        "peekOfCode": "qdrant_client = QdrantClient(path=\"./vector_db\")\n# Create collections for Staff and Zone tables in Qdrant\ntry:\n    qdrant_client.create_collection(\n        collection_name=\"staff_collection\",\n        vectors_config=models.VectorParams(\n            size=512,  # Facenet512 typically outputs 512-dimensional vectors\n            distance=models.Distance.COSINE,\n        ),\n    )",
+        "detail": "vector_db.connect_vectordb",
+        "documentation": {}
+    },
+    {
+        "label": "Tee",
+        "kind": 6,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "class Tee:\n    def __init__(self, file):\n        self.f = file\n    def write(self, what):\n        if self.f is not None:\n            try:\n                self.f.write(what.replace(\"\\n\", \"\\r\\n\"))\n            except OSError:\n                pass\n        tee_f.write(what)",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "CopyTo",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def CopyTo(desc, src, dest):\n    import win32api\n    import win32con\n    while 1:\n        try:\n            win32api.CopyFile(src, dest, 0)\n            return\n        except win32api.error as details:\n            if details.winerror == 5:  # access denied - user not admin.\n                raise",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "LoadSystemModule",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def LoadSystemModule(lib_dir, modname):\n    # See if this is a debug build.\n    import importlib.machinery\n    import importlib.util\n    suffix = \"_d\" if \"_d.pyd\" in importlib.machinery.EXTENSION_SUFFIXES else \"\"\n    filename = \"%s%d%d%s.dll\" % (\n        modname,\n        sys.version_info.major,\n        sys.version_info.minor,\n        suffix,",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "SetPyKeyVal",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def SetPyKeyVal(key_name, value_name, value):\n    root_hkey = get_root_hkey()\n    root_key = winreg.OpenKey(root_hkey, root_key_name)\n    try:\n        my_key = winreg.CreateKey(root_key, key_name)\n        try:\n            winreg.SetValueEx(my_key, value_name, 0, winreg.REG_SZ, value)\n            if verbose:\n                print(f\"-> {root_key_name}\\\\{key_name}[{value_name}]={value!r}\")\n        finally:",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "UnsetPyKeyVal",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def UnsetPyKeyVal(key_name, value_name, delete_key=False):\n    root_hkey = get_root_hkey()\n    root_key = winreg.OpenKey(root_hkey, root_key_name)\n    try:\n        my_key = winreg.OpenKey(root_key, key_name, 0, winreg.KEY_SET_VALUE)\n        try:\n            winreg.DeleteValue(my_key, value_name)\n            if verbose:\n                print(f\"-> DELETE {root_key_name}\\\\{key_name}[{value_name}]\")\n        finally:",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterCOMObjects",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterCOMObjects(register=True):\n    import win32com.server.register\n    if register:\n        func = win32com.server.register.RegisterClasses\n    else:\n        func = win32com.server.register.UnregisterClasses\n    flags = {}\n    if not verbose:\n        flags[\"quiet\"] = 1\n    for module, klass_name in com_modules:",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterHelpFile",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterHelpFile(register=True, lib_dir=None):\n    if lib_dir is None:\n        lib_dir = sysconfig.get_paths()[\"platlib\"]\n    if register:\n        # Register the .chm help file.\n        chm_file = os.path.join(lib_dir, \"PyWin32.chm\")\n        if os.path.isfile(chm_file):\n            # This isn't recursive, so if 'Help' doesn't exist, we croak\n            SetPyKeyVal(\"Help\", None, None)\n            SetPyKeyVal(\"Help\\\\Pythonwin Reference\", None, chm_file)",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterPythonwin",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterPythonwin(register=True, lib_dir=None):\n    \"\"\"Add (or remove) Pythonwin to context menu for python scripts.\n    ??? Should probably also add Edit command for pys files also.\n    Also need to remove these keys on uninstall, but there's no function\n        like file_created to add registry entries to uninstall log ???\n    \"\"\"\n    import os\n    if lib_dir is None:\n        lib_dir = sysconfig.get_paths()[\"platlib\"]\n    classes_root = get_root_hkey()",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_shortcuts_folder",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_shortcuts_folder():\n    if get_root_hkey() == winreg.HKEY_LOCAL_MACHINE:\n        try:\n            fldr = get_special_folder_path(\"CSIDL_COMMON_PROGRAMS\")\n        except OSError:\n            # No CSIDL_COMMON_PROGRAMS on this platform\n            fldr = get_special_folder_path(\"CSIDL_PROGRAMS\")\n    else:\n        # non-admin install - always goes in this user's start menu.\n        fldr = get_special_folder_path(\"CSIDL_PROGRAMS\")",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_system_dir",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_system_dir():\n    import win32api  # we assume this exists.\n    try:\n        import pythoncom\n        import win32process\n        from win32com.shell import shell, shellcon\n        try:\n            if win32process.IsWow64Process():\n                return shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_SYSTEMX86)\n            return shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_SYSTEM)",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "fixup_dbi",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def fixup_dbi():\n    # We used to have a dbi.pyd with our .pyd files, but now have a .py file.\n    # If the user didn't uninstall, they will find the .pyd which will cause\n    # problems - so handle that.\n    import win32api\n    import win32con\n    pyd_name = os.path.join(os.path.dirname(win32api.__file__), \"dbi.pyd\")\n    pyd_d_name = os.path.join(os.path.dirname(win32api.__file__), \"dbi_d.pyd\")\n    py_name = os.path.join(os.path.dirname(win32con.__file__), \"dbi.py\")\n    for this_pyd in (pyd_name, pyd_d_name):",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def install(lib_dir):\n    import traceback\n    # The .pth file is now installed as a regular file.\n    # Create the .pth file in the site-packages dir, and use only relative paths\n    # We used to write a .pth directly to sys.prefix - clobber it.\n    if os.path.isfile(os.path.join(sys.prefix, \"pywin32.pth\")):\n        os.unlink(os.path.join(sys.prefix, \"pywin32.pth\"))\n    # The .pth may be new and therefore not loaded in this session.\n    # Setup the paths just in case.\n    for name in \"win32 win32\\\\lib Pythonwin\".split():",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "uninstall",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def uninstall(lib_dir):\n    # First ensure our system modules are loaded from pywin32_system, so\n    # we can remove the ones we copied...\n    LoadSystemModule(lib_dir, \"pywintypes\")\n    LoadSystemModule(lib_dir, \"pythoncom\")\n    try:\n        RegisterCOMObjects(False)\n    except Exception as why:\n        print(f\"Failed to unregister COM objects: {why}\")\n    try:",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "verify_destination",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def verify_destination(location):\n    if not os.path.isdir(location):\n        raise argparse.ArgumentTypeError(f'Path \"{location}\" does not exist!')\n    return location\ndef main():\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:\n    > python pywin32_postinstall.py -install",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:\n    > python pywin32_postinstall.py -install\n    If you installed pywin32 via a .exe installer, this should be run\n    automatically after installation, but if it fails you can run it again.\n    If you installed pywin32 via PIP, you almost certainly need to run this to\n    setup the environment correctly.",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "tee_f",
+        "kind": 5,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "tee_f = open(os.path.join(tempfile.gettempdir(), \"pywin32_postinstall.log\"), \"w\")\nclass Tee:\n    def __init__(self, file):\n        self.f = file\n    def write(self, what):\n        if self.f is not None:\n            try:\n                self.f.write(what.replace(\"\\n\", \"\\r\\n\"))\n            except OSError:\n                pass",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "sys.stderr",
+        "kind": 5,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "sys.stderr = Tee(sys.stderr)\nsys.stdout = Tee(sys.stdout)\ncom_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "sys.stdout",
+        "kind": 5,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "sys.stdout = Tee(sys.stdout)\ncom_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'\nsilent = 0",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "com_modules",
+        "kind": 5,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "com_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'\nsilent = 0\n# Verbosity of output messages.",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "silent",
+        "kind": 5,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "silent = 0\n# Verbosity of output messages.\nverbose = 1\nroot_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to PythonXX\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "verbose",
+        "kind": 5,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "verbose = 1\nroot_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to PythonXX\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.\n    file_created  # type: ignore[used-before-def]\n    # 3.10 stopped supporting bdist_wininst, but we can still build them with 3.9.",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "root_key_name",
+        "kind": 5,
+        "importPath": "ven.Scripts.pywin32_postinstall",
+        "description": "ven.Scripts.pywin32_postinstall",
+        "peekOfCode": "root_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ntry:\n    # When this script is run from inside the bdist_wininst installer,\n    # file_created() and directory_created() are additional builtin\n    # functions which write lines to PythonXX\\pywin32-install.log. This is\n    # a list of actions for the uninstaller, the format is inspired by what\n    # the Wise installer also creates.\n    file_created  # type: ignore[used-before-def]\n    # 3.10 stopped supporting bdist_wininst, but we can still build them with 3.9.\n    # This can be kept until Python 3.9 or exe installers support is dropped.",
+        "detail": "ven.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "run_test",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_testall",
+        "description": "ven.Scripts.pywin32_testall",
+        "peekOfCode": "def run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()\n    result = subprocess.run(cmd, check=False, cwd=dirname)\n    print(f\"*** Test script '{script}' exited with {result.returncode}\")\n    sys.stdout.flush()\n    if result.returncode:",
+        "detail": "ven.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "find_and_run",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_testall",
+        "description": "ven.Scripts.pywin32_testall",
+        "peekOfCode": "def find_and_run(possible_locations, extras):\n    for maybe in possible_locations:\n        if os.path.isfile(maybe):\n            run_test(maybe, extras)\n            break\n    else:\n        raise RuntimeError(\n            \"Failed to locate a test script in one of %s\" % possible_locations\n        )\ndef main():",
+        "detail": "ven.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ven.Scripts.pywin32_testall",
+        "description": "ven.Scripts.pywin32_testall",
+        "peekOfCode": "def main():\n    import argparse\n    code_directories = [this_dir] + site_packages\n    parser = argparse.ArgumentParser(\n        description=\"A script to trigger tests in all subprojects of PyWin32.\"\n    )\n    parser.add_argument(\n        \"-no-user-interaction\",\n        default=False,\n        action=\"store_true\",",
+        "detail": "ven.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "this_dir",
+        "kind": 5,
+        "importPath": "ven.Scripts.pywin32_testall",
+        "description": "ven.Scripts.pywin32_testall",
+        "peekOfCode": "this_dir = os.path.dirname(__file__)\nsite_packages = [\n    site.getusersitepackages(),\n] + site.getsitepackages()\nfailures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)",
+        "detail": "ven.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "site_packages",
+        "kind": 5,
+        "importPath": "ven.Scripts.pywin32_testall",
+        "description": "ven.Scripts.pywin32_testall",
+        "peekOfCode": "site_packages = [\n    site.getusersitepackages(),\n] + site.getsitepackages()\nfailures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.",
+        "detail": "ven.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "failures",
+        "kind": 5,
+        "importPath": "ven.Scripts.pywin32_testall",
+        "description": "ven.Scripts.pywin32_testall",
+        "peekOfCode": "failures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()",
+        "detail": "ven.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "get_video_corners",
+        "kind": 2,
+        "importPath": "get_screen",
+        "description": "get_screen",
+        "peekOfCode": "def get_video_corners(video_path):\n    # Load the video\n    video = VideoFileClip(video_path)\n    # Get the size (width, height)\n    width, height = video.size\n    # Define corner coordinates based on the width and height\n    # Bottom-left corner (0, height - 1)\n    x1, y1 = 0, height - 1\n    # Bottom-right corner (width - 1, height - 1)\n    x2, y2 = width - 1, height - 1",
+        "detail": "get_screen",
+        "documentation": {}
+    },
+    {
+        "label": "video_path",
+        "kind": 5,
+        "importPath": "get_screen",
+        "description": "get_screen",
+        "peekOfCode": "video_path = r'C:\\Users\\TrisNguyen\\Desktop\\API_Zone_Staff\\workplace_detection\\test.mp4'  # Replace with your video file path\nx1, y1, x2, y2, x3, y3, x4, y4 = get_video_corners(video_path)\n# Calculate Top-left and Bottom-right coordinates\ntop_left = (int(min(x4, x1)), int(min(y4, y1)))  # Top-left corner\nbottom_right = (int(max(x2, x3)), int(max(y2, y3)))  # Bottom-right corner\nprint(f\"Top-left corner: {top_left}\")       # Should be (0, 0)\nprint(f\"Bottom-right corner: {bottom_right}\")  # Should be (width-1, height-1)",
+        "detail": "get_screen",
+        "documentation": {}
+    },
+    {
+        "label": "top_left",
+        "kind": 5,
+        "importPath": "get_screen",
+        "description": "get_screen",
+        "peekOfCode": "top_left = (int(min(x4, x1)), int(min(y4, y1)))  # Top-left corner\nbottom_right = (int(max(x2, x3)), int(max(y2, y3)))  # Bottom-right corner\nprint(f\"Top-left corner: {top_left}\")       # Should be (0, 0)\nprint(f\"Bottom-right corner: {bottom_right}\")  # Should be (width-1, height-1)",
+        "detail": "get_screen",
+        "documentation": {}
+    },
+    {
+        "label": "bottom_right",
+        "kind": 5,
+        "importPath": "get_screen",
+        "description": "get_screen",
+        "peekOfCode": "bottom_right = (int(max(x2, x3)), int(max(y2, y3)))  # Bottom-right corner\nprint(f\"Top-left corner: {top_left}\")       # Should be (0, 0)\nprint(f\"Bottom-right corner: {bottom_right}\")  # Should be (width-1, height-1)",
+        "detail": "get_screen",
+        "documentation": {}
+    },
+    {
+        "label": "staff_embeddings",
+        "kind": 5,
+        "importPath": "test_db",
+        "description": "test_db",
+        "peekOfCode": "staff_embeddings = fetch_staff_embeddings()\nprint(staff_embeddings)\n# staff = load_staff()\n# for row in staff:\n#     print(row)",
+        "detail": "test_db",
+        "documentation": {}
+    }
+]

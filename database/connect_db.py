@@ -22,7 +22,7 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS zone (
 )''')
 
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS task (
+    CREATE TABLE IF NOT EXISTS track (
         staff_id TEXT,
         zone_id INTEGER,
         time DATETIME,
