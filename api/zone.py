@@ -4,7 +4,7 @@ from fastapi import FastAPI, UploadFile, File, HTTPException, APIRouter
 from fastapi.responses import StreamingResponse, JSONResponse
 import os
 import cv2
-
+import numpy as np
 # Create routers
 zone_router = APIRouter()
 
@@ -88,6 +88,71 @@ async def draw_bounding(video_file: UploadFile = File(...)):
 
             # Write the modified frame to the output video
             out.write(frame)
+
+        # Release resources
+        cap.release()
+        out.release()
+
+        # Return the processed video file as a streaming response for download
+        return StreamingResponse(
+            open(output_path, "rb"),
+            media_type="video/mp4",
+            headers={"Content-Disposition": "attachment; filename=temp_video_output.mp4"}
+        )
+
+    except Exception as e:
+        return {"message": str(e)}
+
+@zone_router.post("/cut_zone/")
+async def cut_zone(video_file: UploadFile = File(...)):
+    try:
+        # Load the video file into a temporary directory
+        temp_video_path = os.path.join(TEMP_DIR, "temp_video.mp4")
+        with open(temp_video_path, "wb") as temp_video_file:
+            temp_video_file.write(await video_file.read())
+
+        # Open the video using OpenCV
+        cap = cv2.VideoCapture(temp_video_path)
+
+        # Create a temporary output video file
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        output_path = os.path.join(TEMP_DIR, "temp_video_output.mp4")
+        out = cv2.VideoWriter(output_path, fourcc, cap.get(cv2.CAP_PROP_FPS), 
+                              (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))))
+
+        # Fetch all zones from the database
+        cursor.execute("SELECT x1, y1, x2, y2, x3, y3, x4, y4 FROM zone")
+        zones = cursor.fetchall()
+
+        if not zones:
+            raise HTTPException(status_code=404, detail="No zones found in the database.")
+
+        # Loop through the video frames
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if not ret:
+                break
+
+            # Create a mask for cropping based on zones
+            mask = np.zeros(frame.shape[:2], dtype=np.uint8)
+
+            # Fill the mask for all zones
+            for zone in zones:
+                # Extract points for the bounding box
+                x1, y1, x2, y2, x3, y3, x4, y4 = zone
+
+                # Calculate the bounding box's top-left and bottom-right coordinates
+                top_left = (int(min(x1, x3)), int(min(y1, y2)))  # Top-left corner
+                bottom_right = (int(max(x2, x4)), int(max(y3, y4)))  # Bottom-right corner
+
+                # Create a rectangle on the mask
+                cv2.rectangle(mask, top_left, bottom_right, 255, thickness=cv2.FILLED)
+
+            # Crop the frame to keep only the area within the bounding box
+            cropped_frame = cv2.bitwise_and(frame, frame, mask=mask)
+
+            # Write the modified frame to the output video
+            out.write(cropped_frame)
 
         # Release resources
         cap.release()
