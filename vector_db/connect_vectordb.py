@@ -8,7 +8,7 @@ try:
     qdrant_client.create_collection(
         collection_name="staff_collection",
         vectors_config=models.VectorParams(
-            size=128,  # Facenet typically outputs 128-dimensional vectors
+            size=512,  # Facenet512 typically outputs 512-dimensional vectors
             distance=models.Distance.COSINE,
         ),
     )

@@ -4,7 +4,7 @@ from deepface import DeepFace
 from PIL import Image
 import numpy as np
 from vector_db import qdrant_client, models
-import pickle
+import uuid
 from fastapi.responses import JSONResponse
 import io
 
@@ -15,7 +15,7 @@ staff_router = APIRouter()
 def generate_face_embedding(image_data):
     image = Image.open(io.BytesIO(image_data))
     image_np = np.array(image)
-    embedding = DeepFace.represent(image_np, model_name="Facenet")[0]["embedding"]
+    embedding = DeepFace.represent(image_np, model_name="Facenet512")[0]["embedding"]
     return embedding
 
 # Define API route to add a staff member
@@ -30,18 +30,16 @@ async def add_staff(
         # Read image data and generate face embedding
         image_data = await face_image.read()
         embedding = generate_face_embedding(image_data)
-
-        # Serialize the embedding to bytes
-        embedding_bytes = pickle.dumps(embedding)
         
         # Get the next available ID for staff, as alphanumeric (e.g., BE001)
         cursor.execute("SELECT COUNT(*) FROM staff")
-        staff_count = cursor.fetchone()[0]
-        staff_id = f"BE{staff_count + 1:03d}"  # Generate alphanumeric ID (e.g., BE001, BE002)
+
+        # Generate a UUID for the Qdrant point ID
+        staff_id = str(uuid.uuid4())  # Generate a UUID
 
         # Save staff data into SQLite
-        cursor.execute('''INSERT INTO staff (id, name, age, position, face_image) 
-                          VALUES (?, ?, ?, ?, ?)''', (staff_id, name, age, position, embedding_bytes))
+        cursor.execute('''INSERT INTO staff (id, name, age, position) 
+                          VALUES (?, ?, ?, ?)''', (staff_id, name, age, position))
 
         # Commit to the SQLite database
         sqlite_conn.commit()
@@ -53,7 +51,6 @@ async def add_staff(
                 models.PointStruct(
                     id=staff_id,
                     vector=embedding,  # Face embedding
-                    payload={"name": name, "position": position}
                 )
             ]
         )
