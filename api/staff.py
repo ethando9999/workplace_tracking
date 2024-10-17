@@ -82,7 +82,7 @@ async def query_image_face(image_face: UploadFile = File(...)):
         search_result = qdrant_client.search(
             collection_name="staff_collection",
             query_vector=query_embedding,
-            top=5  # Get top 5 similar vectors
+            top=1  # Get top 5 similar vectors
         )
 
         # Prepare the result
