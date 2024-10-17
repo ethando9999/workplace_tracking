@@ -1,5 +1,5 @@
 from fastapi import FastAPI, File, UploadFile, Form, APIRouter
-from database import cursor, sqlite_conn, get_staff_info
+from database import get_staff_info, insert_staff
 from deepface import DeepFace
 from PIL import Image
 import numpy as np
@@ -30,19 +30,12 @@ async def add_staff(
         # Read image data and generate face embedding
         image_data = await face_image.read()
         embedding = generate_face_embedding(image_data)
-        
-        # Get the next available ID for staff, as alphanumeric (e.g., BE001)
-        cursor.execute("SELECT COUNT(*) FROM staff")
 
         # Generate a UUID for the Qdrant point ID
         staff_id = str(uuid.uuid4())  # Generate a UUID
 
         # Save staff data into SQLite
-        cursor.execute('''INSERT INTO staff (id, name, age, position) 
-                          VALUES (?, ?, ?, ?)''', (staff_id, name, age, position))
-
-        # Commit to the SQLite database
-        sqlite_conn.commit()
+        insert_staff(staff_id, name, age, position)
 
         # Add face embedding to Qdrant staff collection
         qdrant_client.upsert(

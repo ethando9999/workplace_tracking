@@ -1,6 +1,14 @@
-from .connect_db import cursor
+from .connect_db import cursor, sqlite_conn
 import pickle
 import json
+
+def insert_staff(staff_id, name, age, position):
+    # Save staff data into SQLite
+    cursor.execute('''INSERT INTO staff (id, name, age, position) 
+                        VALUES (?, ?, ?, ?)''', (staff_id, name, age, position))
+    # Commit to the SQLite database
+    sqlite_conn.commit()  
+    print('Staff added into db!')
 
 # Example for querying and deserializing embeddings
 def fetch_staff_embeddings():
