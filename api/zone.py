@@ -44,8 +44,8 @@ TEMP_DIR = "temp_video_files"
 os.makedirs(TEMP_DIR, exist_ok=True)  # Create the directory if it doesn't exist
 
 
-@zone_router.post("/process_video/")
-async def process_video(video_file: UploadFile = File(...)):
+@zone_router.post("/draw_bounding/")
+async def draw_bounding(video_file: UploadFile = File(...)):
     try:
         # Load the video file into a temporary directory
         temp_video_path = os.path.join(TEMP_DIR, "temp_video.mp4")
