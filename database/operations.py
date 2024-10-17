@@ -1,5 +1,6 @@
 from .connect_db import cursor
 import pickle
+import json
 
 # Example for querying and deserializing embeddings
 def fetch_staff_embeddings():
@@ -17,3 +18,18 @@ def load_staff():
     cursor.execute("SELECT id, name, age, position FROM staff")
     rows = cursor.fetchall()
     return rows
+
+def get_staff_info(id: str):
+    query = "SELECT name, age, position FROM staff WHERE staff.id = ?"
+    cursor.execute(query, (id,))
+    row = cursor.fetchone()  # Fetch a single record
+
+    if row:
+        staff_info = {
+            'name': row[0],
+            'age': row[1],
+            'position': row[2]
+        }
+        return staff_info  
+    else:
+        return {}  # Return an empty JSON if no record is found

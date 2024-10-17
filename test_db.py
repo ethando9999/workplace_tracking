@@ -1,4 +1,4 @@
-from database import fetch_staff_embeddings, load_staff
+from database import fetch_staff_embeddings, load_staff, get_staff_info
 
 # staff_embeddings = fetch_staff_embeddings()
 # print(staff_embeddings)
@@ -6,3 +6,6 @@ from database import fetch_staff_embeddings, load_staff
 staff = load_staff()
 for row in staff:
     print(row)
+
+info = get_staff_info(id = "c477df85-b76e-4347-8a2d-7ee9a1161e1c")
+print(info)

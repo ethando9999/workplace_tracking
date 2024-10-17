@@ -1,5 +1,5 @@
 from fastapi import FastAPI, File, UploadFile, Form, APIRouter
-from database import cursor, sqlite_conn
+from database import cursor, sqlite_conn, get_staff_info
 from deepface import DeepFace
 from PIL import Image
 import numpy as np
@@ -69,30 +69,34 @@ async def query_image_face(image_face: UploadFile = File(...)):
         image_data = await image_face.read()
         image = Image.open(io.BytesIO(image_data))
 
-        # Convert image to numpy array as required by DeepFace
-        image_np = np.array(image)
+        # Save image to a file
+        output_file = "tmp_image.jpg"  # Đường dẫn và tên file
+        image.save(output_file)
 
         # Generate the embedding using DeepFace with Facenet model
-        query_embedding = DeepFace.represent(image_np, model_name="Facenet")[0]["embedding"]
+        query_embedding = DeepFace.represent(output_file, model_name="Facenet512")[0]["embedding"]
 
         # Search for similar faces in Qdrant
         search_result = qdrant_client.search(
             collection_name="staff_collection",
             query_vector=query_embedding,
-            top=1  # Get top 5 similar vectors
+            limit=1  # Get top 1 similar vector (change if needed)
         )
 
         # Prepare the result
         similar_faces = []
         for point in search_result:
+            staff_info = get_staff_info(point.id)
+            print(staff_info)
             similar_faces.append({
-                "staff_id": point.id,
-                "payload": point.payload,
-                "score": point.score  # Similarity score
+                "score": point.score, # Similarity score
+                "staff_info": staff_info
             })
 
         return JSONResponse(content={"similar_faces": similar_faces}, status_code=200)
 
+    except ValueError as e:
+        return JSONResponse(content={"message": "Face could not be detected."})
     except Exception as e:
         return JSONResponse(content={"message": str(e)}, status_code=500)
     
