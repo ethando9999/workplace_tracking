@@ -5,11 +5,11 @@ from vector_db import qdrant_client
 from database import insert_track
 from datetime import datetime
 
-def track_processing(output_file, zone_id):
+def track_processing(zone_image_file, zone_id):
     try:
         print("Analyzing face...")
         # Generate the embedding using DeepFace with Facenet model
-        query_embedding = DeepFace.represent(output_file, model_name="Facenet512")[0]["embedding"]
+        query_embedding = DeepFace.represent(zone_image_file, model_name="Facenet512")[0]["embedding"]
 
         # Search for similar faces in Qdrant
         search_result = qdrant_client.search(
