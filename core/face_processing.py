@@ -5,7 +5,7 @@ from vector_db import qdrant_client
 from database import insert_track
 from datetime import datetime
 
-def track_processing(zone_image_file, zone_id):
+def track_processing(zone_image_file, zone_id, threshold = 0.5):
     try:
         print("Analyzing face...")
         # Generate the embedding using DeepFace with Facenet model
@@ -20,6 +20,13 @@ def track_processing(zone_image_file, zone_id):
 
         for point in search_result:
             staff_id = point.id
+            score = point.score
+            print(score)
+
+            # Check threshold
+            if score < threshold:
+                return "face does not exist in db!"
+
             current_datetime = datetime.now()
             insert_track(staff_id, zone_id, current_datetime)
 
