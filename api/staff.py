@@ -55,7 +55,7 @@ async def add_staff(
         return JSONResponse(content={"message": str(e)}, status_code=500)
     
 # Define API route for querying similar face images
-@staff_router.post("/query_image_face/")
+@staff_router.post("/query_face_image/")
 async def query_image_face(image_face: UploadFile = File(...)):
     try:
         # Load image from uploaded file

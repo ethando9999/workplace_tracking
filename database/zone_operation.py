@@ -2,7 +2,7 @@ from .connect_db import cursor, sqlite_conn
 
 def get_all_zone():
     # Fetch all zones from the database
-    cursor.execute("SELECT x1, y1, x2, y2, x3, y3, x4, y4 FROM zone")
+    cursor.execute("SELECT id, x1, y1, x2, y2, x3, y3, x4, y4 FROM zone")
     zones = cursor.fetchall()
     return zones
 
