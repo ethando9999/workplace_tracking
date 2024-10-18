@@ -1,4 +1,3 @@
-# from api.processing import streamming_processing
 import cv2
 import numpy as np
 import time
@@ -81,3 +80,68 @@ def camera_streamming_processing(interval=2, stream_url='http://192.168.1.201/64
 
     cv2.destroyAllWindows()
 
+def webcam_processing(interval=5):
+    cap = cv2.VideoCapture(0)  # Open webcam stream (0 is default webcam)
+
+    if not cap.isOpened():
+        print("Error: Could not open webcam.")
+        return
+
+    print("Starting live webcam stream. Capturing a frame every 5 seconds...")
+    start_time = time.time()  # Record the starting time
+
+    # Retrieve all zones from database once at the start
+    zones = get_all_zone()
+
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            print("Failed to capture frame from webcam. Exiting...")
+            break
+
+        # Process the frame to draw bounding boxes for all zones
+        for zone in zones:
+            zone_id, x1, y1, x2, y2, x3, y3, x4, y4 = zone
+            top_left = (int(min(x1, x3)), int(min(y1, y2)))  # Top-left corner
+            bottom_right = (int(max(x2, x4)), int(max(y3, y4)))  # Bottom-right corner
+
+            # Draw bounding box on the frame
+            frame = draw_bounding_box(frame, top_left, bottom_right)
+
+        # Display the processed frame
+        cv2.imshow('Live Webcam Processing', frame)
+
+        # Check if it's time to capture a frame
+        elapsed_time = time.time() - start_time
+        if elapsed_time >= interval:
+            print("Capturing frame...")
+
+            # Create a mask for cropping based on zones
+            mask = np.zeros(frame.shape[:2], dtype=np.uint8)
+
+            # Fill the mask for all zones
+            for zone in zones:
+                zone_id, x1, y1, x2, y2, x3, y3, x4, y4 = zone
+                top_left = (int(min(x1, x3)), int(min(y1, y2)))  # Top-left corner
+                bottom_right = (int(max(x2, x4)), int(max(y3, y4)))  # Bottom-right corner
+
+                # Create a rectangle on the mask for each zone
+                cv2.rectangle(mask, top_left, bottom_right, 255, thickness=cv2.FILLED)
+
+            # Apply the mask to the frame to keep only the area within the zones
+            masked_frame = cv2.bitwise_and(frame, frame, mask=mask)
+
+            # Save the masked frame with zones only
+            output_file = "tmp_image.jpg"
+            cv2.imwrite(output_file, masked_frame)
+            print("Cropped frame saved at tmp_image.jpg")
+
+            start_time = time.time()  # Reset the start time for the next capture
+
+        # Wait for 'q' key to exit
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    # Release resources
+    cap.release()
+    cv2.destroyAllWindows()
