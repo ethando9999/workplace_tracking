@@ -4,8 +4,7 @@ import sqlite3
 sqlite_conn = sqlite3.connect('database.db')
 cursor = sqlite_conn.cursor()
 
-
-# Create tables for staff and zone
+# Create tables for staff and zone, track, camera
 cursor.execute('''CREATE TABLE IF NOT EXISTS staff (
     id TEXT PRIMARY KEY,  -- Change id type to TEXT for alphanumeric IDs
     name TEXT,
@@ -18,7 +17,9 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS zone (
     x1 REAL, y1 REAL, 
     x2 REAL, y2 REAL, 
     x3 REAL, y3 REAL, 
-    x4 REAL, y4 REAL
+    x4 REAL, y4 REAL,
+    camera_id TEXT,
+    FOREIGN KEY (camera_id) REFERENCES camera(id)
 )''')
 
 cursor.execute('''
@@ -30,4 +31,12 @@ cursor.execute('''
         FOREIGN KEY (zone_id) REFERENCES zone(id)
     )
 ''')
+
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS camera (
+        id TEXT PRIMARY KEY,
+        stream_link BLOB
+    )
+''')
+
 sqlite_conn.commit()

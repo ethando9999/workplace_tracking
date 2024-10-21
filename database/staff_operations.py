@@ -41,3 +41,8 @@ def get_staff_info(id: str):
         return staff_info  
     else:
         return {}  # Return an empty JSON if no record is found
+    
+def delete_staff(id):
+    # Delete the zone with the given id from the database
+    cursor.execute("DELETE FROM staff WHERE id = ?", (id,))
+    sqlite_conn.commit()  # Commit the transaction to the database
