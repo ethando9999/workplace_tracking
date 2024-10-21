@@ -1,45 +1,45 @@
 import io
 from PIL import Image
 from deepface import DeepFace
-from vector_db import qdrant_client
 from database import insert_track
 from datetime import datetime
 import numpy as np
+import os
 
-
-class TrackLogger:
-    @staticmethod
-    def insert_track(staff_id, zone_id, timestamp):
-        # This function should log tracking information in the database
-        print(f"Track logged: Staff ID {staff_id}, Zone ID {zone_id}, Timestamp {timestamp}")
-        # Add the actual database insertion logic here.
 
 
 class FaceTracker:
-    def __init__(self, qdrant_db, model_name="Facenet512", threshold=0.3):
-        self.qdrant_db = qdrant_db
-        self.model_name = model_name
+    def __init__(self, vector_db, model_name= None, threshold=0.3):
+        self.vector_db = vector_db
+        self.model_name = model_name if model_name else os.getenv('EMBEDDING_MODEL')
         self.threshold = threshold
     
     def process_face(self, cropped_frame_rgb, zone_id):
         try:
             print("Analyzing face...")
-            
-            # Convert the image from numpy array to PIL Image
+
+            # Convert the image from numpy array to PIL Image for realtime processing
             image_pil = Image.fromarray(cropped_frame_rgb)
-            
+
+            detected_faces = DeepFace.detectFace(
+                np.array(image_pil), # Directly pass numpy array as input 
+                detector_backend='opencv'
+            )
+
             # Generate the embedding using DeepFace with enforce_detection=False
             query_embedding = DeepFace.represent(
-                img_path=np.array(image_pil),  # Directly pass numpy array as input
+                img_path=detected_faces,  
                 model_name=self.model_name,
                 enforce_detection=False  # Disable strict face detection
             )[0]["embedding"]
+
+            print(query_embedding)
             
             # Search for similar faces in Qdrant
-            search_result = self.qdrant_db.search_face(
+            search_result = self.vector_db.search_vectors(
                 collection_name="staff_collection",
-                query_embedding=query_embedding,
-                limit=1  # Get top 1 similar vector
+                query_vector=query_embedding,
+                top_k=1  # Get top 1 similar vector
             )
             
             # Process search result
@@ -54,8 +54,9 @@ class FaceTracker:
                 
                 # Insert tracking information
                 current_datetime = datetime.now()
-                TrackLogger.insert_track(staff_id, zone_id, current_datetime)
-        
+                print(f"Track logged: Staff ID {staff_id}, Zone ID {zone_id}, Timestamp {current_datetime}")
+                insert_track(staff_id, zone_id, current_datetime)
+    
         except ValueError:
             return "Face could not be detected."
         except Exception as e:

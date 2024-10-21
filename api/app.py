@@ -13,29 +13,6 @@ app.include_router(staff_router)
 app.include_router(zone_router)
 
 
-# Function to load face vectors from SQLite and upsert them into Qdrant
-# def load_vectors_to_qdrant():
-#     cursor.execute("SELECT id, face_image FROM staff")
-#     rows = cursor.fetchall()
-#     for row in rows:
-#         staff_id = row[0]
-#         embedding_bytes = row[1]
-#         embedding = pickle.loads(embedding_bytes)  # Deserialize the embedding back into a list
-
-#         # Insert vector into Qdrant
-#         qdrant_client.upsert(
-#             collection_name="staff_collection",
-#             points=[
-#                 models.PointStruct(
-#                     id=staff_id,
-#                     vector=embedding,  # The deserialized face vector
-#                     payload={
-#                         "staff_id": staff_id
-#                     }
-#                 )
-#             ]
-#         )
-
 
 # @app.post("/tracking_changes/")
 # async def track_changes():
