@@ -74,6 +74,6 @@ def process_frame(frame, draw_bounding=True):
 
     return frame
 
-# Function to capture and process the live webcam feed
-def run_live_processing(draw_bounding=True):
-    start_webcam_processing
+# # Function to capture and process the live webcam feed
+# def run_live_processing(draw_bounding=True):
+#     start_webcam_processing
