@@ -4,35 +4,61 @@ from deepface import DeepFace
 from vector_db import qdrant_client
 from database import insert_track
 from datetime import datetime
+import numpy as np
 
-def track_processing(zone_image_file, zone_id, threshold = 0.5):
-    try:
-        print("Analyzing face...")
-        # Generate the embedding using DeepFace with Facenet model
-        query_embedding = DeepFace.represent(zone_image_file, model_name="Facenet512")[0]["embedding"]
 
-        # Search for similar faces in Qdrant
-        search_result = qdrant_client.search(
-            collection_name="staff_collection",
-            query_vector=query_embedding,
-            limit=1  # Get top 1 similar vector (change if needed)
-        )
+class TrackLogger:
+    @staticmethod
+    def insert_track(staff_id, zone_id, timestamp):
+        # This function should log tracking information in the database
+        print(f"Track logged: Staff ID {staff_id}, Zone ID {zone_id}, Timestamp {timestamp}")
+        # Add the actual database insertion logic here.
 
-        for point in search_result:
-            staff_id = point.id
-            score = point.score
-            print(score)
 
-            # Check threshold
-            if score < threshold:
-                return "face does not exist in db!"
-
-            current_datetime = datetime.now()
-            insert_track(staff_id, zone_id, current_datetime)
-
-    except ValueError as e:
-        return "Face could not be detected."
-    except Exception as e:
-        return str(e)
+class FaceTracker:
+    def __init__(self, qdrant_db, model_name="Facenet512", threshold=0.3):
+        self.qdrant_db = qdrant_db
+        self.model_name = model_name
+        self.threshold = threshold
     
-    return "Face detected!"
+    def process_face(self, cropped_frame_rgb, zone_id):
+        try:
+            print("Analyzing face...")
+            
+            # Convert the image from numpy array to PIL Image
+            image_pil = Image.fromarray(cropped_frame_rgb)
+            
+            # Generate the embedding using DeepFace with enforce_detection=False
+            query_embedding = DeepFace.represent(
+                img_path=np.array(image_pil),  # Directly pass numpy array as input
+                model_name=self.model_name,
+                enforce_detection=False  # Disable strict face detection
+            )[0]["embedding"]
+            
+            # Search for similar faces in Qdrant
+            search_result = self.qdrant_db.search_face(
+                collection_name="staff_collection",
+                query_embedding=query_embedding,
+                limit=1  # Get top 1 similar vector
+            )
+            
+            # Process search result
+            for point in search_result:
+                staff_id = point.id
+                score = point.score
+                print(f"Similarity score: {score}")
+                
+                # Check if the score meets the threshold
+                if score < self.threshold:
+                    return "Face does not exist in the database!"
+                
+                # Insert tracking information
+                current_datetime = datetime.now()
+                TrackLogger.insert_track(staff_id, zone_id, current_datetime)
+        
+        except ValueError:
+            return "Face could not be detected."
+        except Exception as e:
+            return str(e)
+        
+        return "Face detected and recorded!"
