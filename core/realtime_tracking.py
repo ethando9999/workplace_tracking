@@ -58,8 +58,7 @@ class RT_Tracking:
                 # cv2.imwrite(output_file, cropped_frame)
                 # print("Cropped frame saved at tmp_image.jpg")
 
-                track = self.face_tracker.tracking_face(cropped_frame, zone_id)
-                print(track)
+                self.face_tracker.tracking_face(cropped_frame, zone_id)
 
                 start = True
 
