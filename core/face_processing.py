@@ -13,27 +13,47 @@ class FaceTracker:
         self.vector_db = vector_db
         self.model_name = model_name if model_name else os.getenv('EMBEDDING_MODEL')
         self.threshold = threshold
-    
-    def process_face(self, cropped_frame_rgb, zone_id):
+
+    def embedding_face(self, cropped_frame_rgb, byte_image=False):
         try:
             print("Analyzing face...")
 
-            # Convert the image from numpy array to PIL Image for realtime processing
-            image_pil = Image.fromarray(cropped_frame_rgb)
+            if byte_image:
+                # Open the image and convert it to a numpy array
+                image_pil = Image.open(io.BytesIO(cropped_frame_rgb))
+            else:
+                # Convert the image from numpy array to PIL Image for real-time processing
+                image_pil = Image.fromarray(cropped_frame_rgb)
 
-            detected_faces = DeepFace.detectFace(
-                np.array(image_pil), # Directly pass numpy array as input 
+            detected_face = DeepFace.detectFace(
+                np.array(image_pil),  # Directly pass numpy array as input
                 detector_backend='opencv'
             )
+            print(self.model_name)
+            print("Face detected!")
 
-            # Generate the embedding using DeepFace with enforce_detection=False
-            query_embedding = DeepFace.represent(
-                img_path=detected_faces,  
-                model_name=self.model_name,
-                enforce_detection=False  # Disable strict face detection
-            )[0]["embedding"]
+            # Ensure detected_face is in the correct format (numpy array)
+            if isinstance(detected_face, np.ndarray):
+                # Generate the embedding using DeepFace
+                face_embedding = DeepFace.represent(
+                    img_path=detected_face,  # Pass the numpy array directly
+                    model_name=self.model_name,
+                    enforce_detection=False  # Disable strict face detection
+                )[0]["embedding"]
 
-            print(query_embedding)
+                print("Successful embedding face!")
+            else:
+                raise ValueError("Detected face is not a valid numpy array.")
+
+        except Exception as e:
+            print(e)
+            return str(e)
+
+        return face_embedding
+    
+    def tracking_face(self, cropped_frame_rgb, zone_id):
+        try:
+            query_embedding = self.embedding_face(cropped_frame_rgb)
             
             # Search for similar faces in Qdrant
             search_result = self.vector_db.search_vectors(
@@ -57,9 +77,7 @@ class FaceTracker:
                 print(f"Track logged: Staff ID {staff_id}, Zone ID {zone_id}, Timestamp {current_datetime}")
                 insert_track(staff_id, zone_id, current_datetime)
     
-        except ValueError:
-            return "Face could not be detected."
         except Exception as e:
             return str(e)
         
-        return "Face detected and recorded!"
+        return "TRACKING SUCCESSFULLY!"

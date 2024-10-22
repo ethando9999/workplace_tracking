@@ -17,7 +17,7 @@ class QdrantVectorDB(QdrantClient):
         :param distance_metric: The distance metric to use (default: COSINE).
         """
         try:
-            self.create_collection(
+            super().create_collection(
                 collection_name=collection_name,
                 vectors_config=models.VectorParams(
                     size=self.vector_size,
@@ -36,10 +36,30 @@ class QdrantVectorDB(QdrantClient):
         :param vectors: List of vectors to insert.
         :param payload: Optional additional metadata associated with the vectors.
         """
-        return self.upload_collection(
+        return super().upload_collection(
             collection_name=collection_name,
             vectors=vectors,
             payload=payload
+        )
+    
+    def upsert_vector(self, collection_name, point_id, vector):
+        """
+        Update or insert a new point into the collection.
+
+        If point with given ID already exists - it will be overwritten.
+
+        :param collection_name: Name of the collection where vectors will be inserted.
+        :param vectors: List of vectors to insert.
+        :param payload: Optional additional metadata associated with the vectors.
+        """
+        return super().upsert(
+            collection_name=collection_name,
+            points=[
+                models.PointStruct(
+                    id=point_id,
+                    vector=vector,  
+                )
+            ]
         )
 
     def search_vectors(self, collection_name, query_vector, top_k=5):
@@ -51,7 +71,7 @@ class QdrantVectorDB(QdrantClient):
         :param top_k: Number of top results to return.
         :return: List of search results.
         """
-        search_result = self.search(
+        search_result = super().search(
             collection_name=collection_name,
             query_vector=query_vector,
             limit=top_k,
@@ -66,7 +86,7 @@ class QdrantVectorDB(QdrantClient):
         :param point_id: The ID of the vector to delete.
         """
         try:
-            self.delete(
+            super().delete(
                 collection_name=collection_name,
                 points_selector=models.PointIdsList(points=[point_id])
             )
@@ -74,14 +94,14 @@ class QdrantVectorDB(QdrantClient):
         except Exception as e:
             print(f"Error deleting vector with point ID '{point_id}' from collection '{collection_name}': {e}")
 
-    def delete_vector_collection(self, collection_name):
+    def delete_collection(self, collection_name):
         """
         Delete a specific collection.
         
         :param collection_name: Name of the collection to delete.
         """
         try:
-            self.delete_collection(collection_name)
+            super().delete_collection(collection_name)
             print(f"Collection '{collection_name}' deleted successfully.")
         except ValueError as e:
             print(f"Collection '{collection_name}' does not exist.")
