@@ -8,4 +8,4 @@ load_dotenv()
 
 embedding_model = os.getenv('EMBEDDING_MODEL')
 # Init face_tracker
-face_tracker = FaceTracker(qdrant_vectordb, embedding_model, threshold=0.3)
+face_tracker = FaceTracker(qdrant_vectordb, embedding_model, threshold=0.7)

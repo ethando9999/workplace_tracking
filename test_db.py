@@ -4,7 +4,7 @@ from database.staff_operations import delete_staff
 
 # staff_embeddings = fetch_staff_embeddings()
 # print(staff_embeddings)
-delete_staff('bcd0563c-8226-4d85-9405-0a7e9feef6aa')
+delete_staff('56651133-59e5-42f6-8550-a95414f1f596')
 
 staff = load_staff()
 for row in staff:

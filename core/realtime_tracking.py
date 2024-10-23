@@ -54,9 +54,9 @@ class RT_Tracking:
                 cv2.rectangle(mask, top_left, bottom_right, 255, thickness=cv2.FILLED)
                 cropped_frame = cv2.bitwise_and(frame, frame, mask=mask)
 
-                # output_file = "tmp_image.jpg"
-                # cv2.imwrite(output_file, cropped_frame)
-                # print("Cropped frame saved at tmp_image.jpg")
+                output_file = "tmp_image.jpg"
+                cv2.imwrite(output_file, cropped_frame)
+                print("Cropped frame saved at tmp_image.jpg")
 
                 self.face_tracker.tracking_face(cropped_frame, zone_id)
 

@@ -42,8 +42,8 @@ async def add_staff(
         # Read image data and generate face embedding
         image_data = await face_image.read()
 
-        # embedding = face_tracker.embedding_face(image_data, byte_image=True)
-        embedding = generate_face_embedding(image_data)
+        embedding = face_tracker.embedding_face(image_data, byte_image=True)
+        # embedding = generate_face_embedding(image_data)
 
         # Generate a UUID for the Qdrant point ID
         staff_id = str(uuid.uuid4())  # Generate a UUID

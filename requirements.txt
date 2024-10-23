@@ -6,3 +6,4 @@ tf-keras
 python-multipart
 python-dotenv
 qdrant-client
+ultralytics
